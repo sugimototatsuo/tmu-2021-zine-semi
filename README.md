@@ -1,1 +1,1 @@
-# tmu-2021-zine-smi
+# tmu-2021-zine-semi
