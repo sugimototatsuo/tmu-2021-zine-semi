@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 基礎ゼミナール</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.3/d3.min.js"
+      integrity="sha512-yUss5eNKknJ09DHzZmaay2ghVn792woaeqxI0rBr9mNlOJwbV/2HT3Snd+By3cVDlISH7ApAugQtULgYeBqZ8Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script>
+      const data =　await d3.tsv("data/zine.tsv");
+      d3.select('#result').text(data);
+    </script>
+  </body>
+</html>
