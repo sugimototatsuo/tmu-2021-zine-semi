@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>2021 基礎ゼミナール</title>
+    <title>2021 Zineゼミ</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.3/d3.min.js"
       integrity="sha512-yUss5eNKknJ09DHzZmaay2ghVn792woaeqxI0rBr9mNlOJwbV/2HT3Snd+By3cVDlISH7ApAugQtULgYeBqZ8Q=="
@@ -11,11 +11,19 @@
     ></script>
   </head>
   <body>
-    <div id="result"></div>
+    <h1>2021 Zineゼミ</h1>
+    <div id="zine-list"></div>
+    <footer>
+      東京都立大学システムデザイン学部インダストリアルアート学科 杉本達應研究室
+    </footer>
     <script>
       async function loadData() {
         const data = await d3.tsv("data/zine.tsv");
-        d3.select("#result").text("Test");
+        d3.select("#zine-list")
+          .selectAll("div")
+          .data(data)
+          .join("div")
+          .text((d) => d);
       }
       loadData();
     </script>
