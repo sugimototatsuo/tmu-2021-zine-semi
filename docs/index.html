@@ -20,11 +20,19 @@
       async function loadData() {
         const data = await d3.tsv("data/zine.tsv");
         console.log(data);
-        d3.select("#zine-list")
+
+        const zine = d3
+          .select("#zine-list")
           .selectAll("div")
           .data(data)
-          .join("div")
-          .text((d) => d);
+          .join("div");
+        zine.append("div").text((d) => d.title);
+        zine.append("div").text((d) => d.name);
+        zine.append("div").text((d) => d.description);
+        zine
+          .append("img")
+          .attr("href", (d, i) => `images/${d3.format("02d")(i)}.jpg`)
+          .attr("alt", (d) => d.title);
       }
       loadData();
     </script>
