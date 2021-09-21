@@ -31,8 +31,9 @@
         zine.append("div").text((d) => d.description);
         zine
           .append("img")
-          .attr("src", (d, i) => `images/${d3.format("02d")(i)}.jpg`)
-          .attr("alt", (d) => d.title);
+          .attr("src", (d, i) => `images/${d3.format("02d")(i + 1)}.jpg`)
+          .attr("alt", (d) => d.title)
+          .style("width", "200px");
       }
       loadData();
     </script>
