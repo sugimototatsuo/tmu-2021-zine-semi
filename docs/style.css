@@ -1,5 +1,11 @@
 .zine-overview {
-  max-width: 300px;
+  max-width: 260px;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.zine-overview [slot="image"] {
+  object-fit: cover;
+  width: 260px;
+  height: 260px;
 }
