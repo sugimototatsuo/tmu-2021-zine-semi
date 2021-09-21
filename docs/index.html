@@ -17,6 +17,7 @@
       type="module"
       src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.52/dist/shoelace.js"
     ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>2021 Zineゼミ</h1>
@@ -33,7 +34,8 @@
           .select("#zine-list")
           .selectAll("sl-card")
           .data(data)
-          .join("sl-card");
+          .join("sl-card")
+          .classed("zine-overview", true);
         zine
           .append("img")
           .attr("src", (d, i) => `images/${d3.format("02d")(i + 1)}.jpg`)
