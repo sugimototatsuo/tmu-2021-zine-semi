@@ -1,7 +1,7 @@
 .zine-overview {
   max-width: 260px;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .zine-overview [slot="image"] {
