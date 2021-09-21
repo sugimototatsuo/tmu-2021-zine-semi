@@ -30,7 +30,11 @@ async function loadData() {
     .append("img")
     .attr("src", (d, i) => `images/${d3.format("02d")(i + 1)}.jpg`)
     .attr("alt", (d) => d.title)
-    .attr("slot", "image");
+    .attr("slot", "image")
+    .on("click", (e) => {
+      openLightbox(e);
+    })
+    .style('cursor', 'pointer');
   zine.append("strong").text((d) => d.title);
   zine.append("p").text((d) => d.name);
   zine.append("small").text((d) => d.description);
@@ -40,34 +44,10 @@ async function loadData() {
     .append("sl-button")
     .attr("type", "primary")
     .attr("pill", "")
-    // .attr("href", (d, i) => `zine/${d3.format("02d")(i + 1)}/01.jpg`)
     .html(`<sl-icon name="book"></sl-icon> 読む`)
     .on("click", (e) => {
       openLightbox(e);
     });
-
-  zine
-    .append("a")
-    .on("click", () => {
-      openLightbox(1);
-    })
-    .text("test");
-
-  // zine.append('div')
-  //   .selectAll('a')
-  //   .data((d,i) => d3.range(1, 11).map(page => ({
-  //     index: i,
-  //     link: `zine/${d3.format("02d")(i + 1)}/${d3.format("02d")(page)}.jpg`)
-  //   }))
-  //   .join('a')
-  //   .attr('href',  (d) => d.link)
-  //   .attr('data-lightbox', d => d.index)
-  //   .text((d,i) => i)
-
-  // <a href="images/image-2.jpg" data-lightbox="roadtrip">Image #2</a>
-
-  // d3.selectAll("sl-button").on("click", openLightbox(1));
-  // d3.select("img").on("click", openLightbox(1));
 }
 
 loadData();
