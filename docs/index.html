@@ -19,6 +19,7 @@
     <script>
       async function loadData() {
         const data = await d3.tsv("data/zine.tsv");
+        console.log(data);
         d3.select("#zine-list")
           .selectAll("div")
           .data(data)
