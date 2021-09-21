@@ -13,8 +13,11 @@
   <body>
     <div id="result"></div>
     <script>
-      const data =　await d3.tsv("data/zine.tsv");
-      d3.select('#result').text("Test");
+      async function loadData() {
+        const data = await d3.tsv("data/zine.tsv");
+        d3.select("#result").text("Test");
+      }
+      loadData();
     </script>
   </body>
 </html>
