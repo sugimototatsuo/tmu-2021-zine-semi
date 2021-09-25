@@ -24,7 +24,7 @@ function openLightbox(event) {
 async function loadData() {
   const data = await d3.tsv("data/zine.tsv", d3.autoType);
   // console.log(data);
-  console.log(chunkArray(data, 4));
+  // console.log(chunkArray(data, 4));
 
   const columns = d3.select("#zine-list")
     .selectAll('div')
