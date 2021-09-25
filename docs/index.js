@@ -58,19 +58,34 @@ async function loadData() {
     .classed('card-content', true)
     .append('div')
     .classed('content', true)
+  cardContent.append('div')
+    .classed('tags', true)
+    .append('span')
+    .classed('tag', true)
+    .classed('is-light', true)
+    .classed('is-round', true)
+    .text(d => `${d.id} / ${data.length}`)
   cardContent.append("strong").text((d) => d.title);
   cardContent.append("p").text((d) => d.name);
   cardContent.append("small").text((d) => d.description);
 
-  card.append('footer')
+  const cardFooter = card.append('footer')
     .classed('card-footer', true)
+
+  cardFooter
     .append('a')
     .classed('card-footer-item', true)
     .attr('href', '#')
-    .text('読む')
+    .html(`<span class="icon">
+    <i class="fas fa-book-open"></i>
+  </span>&nbsp;読む`)
     .on("click", (e) => {
       openLightbox(e);
     });
+
+  // cardFooter.append('span')
+  //   .classed('card-footer-item', true)
+  //   .text('test')
 
   // const zine = d3
   //   .select("#zine-list")

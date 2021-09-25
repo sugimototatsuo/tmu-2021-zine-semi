@@ -8,6 +8,9 @@
   font-size: 2rem;
   color: rgb(98, 140, 142);
 }
+.tag {
+  margin-left: auto;
+}
 
 .zine-thumbnail {
   object-fit: cover;
