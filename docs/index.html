@@ -2,6 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ZINESTAND 2021</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.3/d3.min.js"
@@ -17,19 +18,36 @@
       type="module"
       src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.52/dist/shoelace.js"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+      integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="libs/fslightbox-basic-3.3.0/fslightbox.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>ZINESTAND 2021</h1>
-      <h2>2021 Zine Seminar</h2>
-    </header>
-    <main>
-      <div id="zine-list"></div>
-    </main>
-    <footer>
-      東京都立大学システムデザイン学部インダストリアルアート学科 杉本達應研究室
+    <section class="section">
+      <div class="container">
+        <h1 class="title">ZINESTAND 2021</h1>
+        <h2 class="subtitle">2021 Zine Seminar</h2>
+        <p>24人がつくった24冊のZineをご覧ください。</p>
+      </div>
+    </section>
+    <section class="section">
+      <div id="zine-list" class="container"></div>
+    </section>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <a href="//lab.sugimototatsuo.com/" target="_blank"
+            >東京都立大学システムデザイン学部インダストリアルアート学科
+            杉本達應研究室</a
+          >
+        </p>
+      </div>
     </footer>
     <script src="index.js"></script>
   </body>

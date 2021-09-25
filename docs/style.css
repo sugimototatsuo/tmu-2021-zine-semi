@@ -1,4 +1,8 @@
-body {
+.zine-thumbnail {
+  object-fit: cover;
+}
+
+/* body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   margin: 0;
@@ -27,4 +31,4 @@ footer {
 footer {
   border-top: 1px solid #eee;
   padding: 3em 0;
-}
+} */
