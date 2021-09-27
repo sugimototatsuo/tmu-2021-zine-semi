@@ -72,16 +72,17 @@ async function loadData() {
   const cardFooter = card.append('footer')
     .classed('card-footer', true)
 
-  cardFooter
+  const readLink = cardFooter
     .append('a')
     .classed('card-footer-item', true)
     .attr('href', '#')
-    .html(`<span class="icon">
-    <i class="fas fa-book-open"></i>
-  </span>&nbsp;読む`)
     .on("click", (e) => {
       openLightbox(e);
-    });
+    })
+  readLink.append('span')
+    .attr('class', 'fas fa-book-open')
+  readLink.append('span')
+    .html('&nbsp;読む')
 }
 
 loadData();
